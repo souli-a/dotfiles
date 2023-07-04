@@ -1,0 +1,152 @@
+[
+  // Toggle comment
+  {
+    "key": "ctrl+numpad_divide",
+    "command": "editor.action.blockComment",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  // Go start/end line
+  {
+    "key": "ctrl+up ctrl+right",
+    "command": "cursorLineEnd"
+  },
+  {
+    "key": "ctrl+up ctrl+left",
+    "command": "cursorLineStart"
+  },
+  // Make room
+  {
+    "key": "alt+1",
+    "command": "multiCommand.makeRoom"
+  },
+  // Show commands
+  {
+    "key": "ctrl+p",
+    "command": "workbench.action.showCommands"
+  },
+  // Go to the folder
+  {
+    "key": "ctrl+shift+o",
+    "command": "revealFileInOS"
+  },
+  // Symbol
+  {
+    "key": "ctrl+r",
+    "command": "workbench.action.gotoSymbol"
+  },
+  // New file
+  {
+    "key": "ctrl+n",
+    "command": "explorer.newFile"
+  },
+  // Terminal
+  {
+    "key": "ctrl+t",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  // Enter to make a line
+  {
+    "key": "ctrl+enter",
+    "command": "editor.action.insertLineAfter",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "shift+enter",
+    "command": "editor.action.insertLineBefore",
+    "when": "textInputFocus"
+  },
+  // Change window focus
+  {
+    "key": "ctrl+tab",
+    "command": "workbench.action.nextEditor",
+    "when": "editorTextFocus"
+  },
+  // Move lines
+  {
+    "key": "alt+down",
+    "command": "editor.action.moveLinesDownAction",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+up",
+    "command": "editor.action.moveLinesUpAction",
+    "when": "editorTextFocus"
+  },
+  // Select lines
+  {
+    "key": "ctrl+shift ctrl+up",
+    "command": "cursorUpSelect",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift ctrl+down",
+    "command": "cursorDownSelect",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift ctrl+left",
+    "command": "cursorWordPartLeftSelect",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift ctrl+right",
+    "command": "cursorWordPartRightSelect",
+    "when": "editorTextFocus"
+  },
+  // Delete a line
+  {
+    "key": "ctrl+x",
+    "command": "editor.action.deleteLines",
+    "when": "editorTextFocus"
+  },
+  // Jump word to word
+  {
+    "key": "ctrl+left",
+    "command": "cursorWordPartLeft",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+right",
+    "command": "cursorWordPartRight",
+    "when": "textInputFocus"
+  },
+  // Delete a word
+  {
+    "key": "ctrl+backspace",
+    "command": "deleteWordPartLeft",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+backspace",
+    "command": "deleteWordPartLeft",
+    "when": "textInputFocus"
+  },
+  // Focus on file on file explore
+  {
+    "key": "ctrl+b",
+    "command": "workbench.view.explorer",
+    "when": "editorTextFocus"
+  },
+  // Switch between window
+  {
+    "key": "alt+left",
+    "command": "workbench.action.focusPreviousGroup",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+right",
+    "command": "workbench.action.focusNextGroup",
+    "when": "editorTextFocus"
+  },
+  // Fold/unfold
+  {
+    "key": "ctrl+i",
+    "command": "editor.unfoldAll",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+u",
+    "command": "editor.foldAll",
+    "when": "editorTextFocus && foldingEnabled"
+  }
+]

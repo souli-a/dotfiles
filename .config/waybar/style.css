@@ -1,0 +1,98 @@
+@define-color color1 #0E121C;
+@define-color color2 #FBFBFB;
+@define-color color3 #CBA6F7;
+
+* {
+  border: none;
+  font-size: 18;
+  transition: none;
+  min-height: 0;
+  padding: 2;
+  font-family: Roboto Mono;
+  font-weight: 500;
+}
+
+window#waybar {
+  background: transparent;
+  color: @color2;
+}
+
+#workspaces {
+  color: @color2;
+  background: transparent;
+  border-radius: 7;
+  margin: 0 0 10 5;
+  box-shadow: none;
+  border: none;
+}
+
+#workspaces *,
+#workspaces *.active,
+#workspaces *:hover,
+#workspaces *.active:hover {
+  box-shadow: none;
+  border: none;
+}
+
+#workspaces button {
+  background: @color1;
+  color: @color2;
+  transition: none;
+  padding: 3 10 3 10;
+  min-height: 10px;
+  box-shadow: none;
+  border: none;
+}
+
+#workspaces button:not(:first-child) {
+  margin: 0 0 0 10;
+  box-shadow: none;
+  border: none;
+}
+
+#workspaces button.active {
+  color: @color1;
+  background-color: @color3;
+  transition: none;
+  box-shadow: none;
+  border: none;
+}
+
+#workspaces button.active:hover {
+  color: @color1;
+  background-color: @color3;
+  box-shadow: none;
+  border: none;
+  text-shadow: inherit;
+}
+
+#workspaces button:hover {
+  background: @color1;
+  color: @color2;
+  box-shadow: none;
+  border: none;
+  text-shadow: inherit;
+}
+
+#clock {
+  background: @color1;
+  color: @color2;
+  border-radius: 7;
+  padding: 3 10 3 10;
+  margin: 0 0 10 0;
+}
+
+#pulseaudio {
+  background: @color1;
+  color: @color2;
+  margin: 0 5 10 10;
+  border-radius: 7;
+  padding: 3 10 3 10;
+}
+
+#tray {
+  background: @color1;
+  margin: 0 10 10 0;
+  border-radius: 7;
+  padding: 3 10 3 10;
+}

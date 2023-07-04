@@ -1,0 +1,8 @@
+gtk-icon-theme-name = "Adwaita"
+gtk-theme-name = "Adwaita-dark"
+gtk-font-name = "Roboto Mono 20"
+gtk-cursor-theme-size = 48
+gtk-button-images = 0
+gtk-menu-images = 0
+gtk-enable-event-sounds = 0
+gtk-enable-input-feedback-sounds = 0

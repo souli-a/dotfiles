@@ -1,0 +1,68 @@
+configuration {
+  font: "Roboto Mono Medium 18";
+  show-icons: false;
+  click-to-exit: true;
+  display-drun: "";
+  drun-display-format: "{name}";
+}
+
+* {
+  bg0: #0E121C;
+  bg1: #FBFBFB;
+  bg2: #CBA6F7;
+  text-color: @bg1;
+  background-color: transparent;
+  padding: 5px;
+  margin: 0px;
+  spacing: 10px;
+  highlight: none;
+}
+
+window {
+  location: center;
+  border: 5px;
+  border-color: @bg2;
+  width: 320px;
+  height: 373px;
+  background-color: @bg0;
+  border-radius: 7px;
+}
+
+inputbar {
+  children: [ prompt, entry ];
+  padding: 10px 10px 20px 0px;
+  border: 0px 0px 5px 0px;
+  border-radius: 7px;
+  border-color: @bg2;
+}
+
+prompt {
+  enabled: true;
+  background-color: @bg0;
+  text-color: @bg1;
+  padding: 0px;
+}
+
+entry {
+  padding: 0%;
+}
+
+element {
+  border: 0px;
+  padding: 0px;
+}
+
+element selected {
+  background-color: @bg0;
+  text-color: @bg2;
+  font-weight: 300px;
+}
+
+element selected active {
+  background-color: @bg2;
+  text-color: @bg2;
+}
+
+element-text {
+  text-color: inherit;
+}

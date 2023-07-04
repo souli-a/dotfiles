@@ -1,0 +1,43 @@
+{
+  "layer": "top",
+  "position": "bottom",
+  "exclusive": true,
+  "modules-left": [
+    "wlr/workspaces"
+  ],
+  "modules-right": [
+    "tray",
+    "clock",
+    "pulseaudio"
+  ],
+  "clock": {
+    "interval": 60,
+    "format": "{:%H:%M}",
+    "format-alt": "{:%a %d %b}",
+    "tooltip": false
+  },
+  "wlr/workspaces": {
+    "on-click": "activate",
+    "persistent_workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": []
+    }
+  },
+  "tray": {
+    "icon-size": 20,
+    "show-passive-items": false,
+    "spacing": 10,
+    "tooltip": false
+  },
+  "pulseaudio": {
+    "format": "{volume}%",
+    "format-muted": "Muted",
+    "on-click": "pamixer -t",
+    "on-scroll-up": "pamixer -i 10",
+    "on-scroll-down": "pamixer -d 10",
+    "tooltip": false
+  }
+}

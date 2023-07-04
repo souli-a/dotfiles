@@ -1,0 +1,40 @@
+[global]
+font = Roboto Mono Medium 18
+width = (0, 800)
+height = 800
+origin = bottom-right
+offset = 70x70
+padding = 10
+horizontal_padding = 10
+frame_width = 5
+corner_radius = 7
+frame_color = "#CBA6F7"
+sort = yes
+gap_size = 5
+idle_threshold = 30
+line_height = 1
+format = "%a: %s"
+show_indicators = yes
+icon_position = left
+history_length = 10
+alignment = center
+title = Dunst
+class = Dunst
+
+[urgency_low]
+background = "#0E121C"
+foreground = "#FBFBFB"
+frame_color = "#CBA6F7"
+timeout = 10
+
+[urgency_normal]
+background = "#0E121C"
+foreground = "#FBFBFB"
+frame_color = "#CBA6F7"
+timeout = 10
+
+[urgency_critical]
+background = "#0E121C"
+foreground = "#DE1241"
+frame_color = "#DE1241"
+timeout = 45
