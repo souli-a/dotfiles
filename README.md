@@ -1,3 +1,7 @@
+# Preview
+
+![preview](https://i.ibb.co/rZH6FWL/arch.png)
+
 # Table of contents
 
 - [Install the config](#install-the-config)
