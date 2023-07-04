@@ -1,6 +1,6 @@
 # Preview
 
-![preview](https://i.ibb.co/rZH6FWL/arch.png)
+![preview](preview.png)
 
 # Table of contents
 
