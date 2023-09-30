@@ -49,17 +49,20 @@ alias h="htop"
 
 alias n="nvim"
 
-alias nnn="nnn -H -e -E"
+alias nnn="nnn -H -e -E -C"
 alias feh="feh --zoom 50"
 
 alias pdev="pnpm run dev"
+alias pbuild="pnpm run build"
+alias pupdate="pnpm update --latest"
+alias pi="pnpm i"
 
 alias gae="git add ."
 alias ga="git add"
 alias gc="git commit -m"
 alias gp="git push"
 
-alias lsa="ls -a"
+alias lsa="ls -a --color --file-type --group-directories-first --sort=extension"
 alias del="sudo rm -rf"
 alias so="source ~/.zshrc"
 alias findit="sudo find / -name"

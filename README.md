@@ -21,14 +21,14 @@
 ```bash
 git clone https://github.com/souli-a/dotfiles.git
 sudo rm -rf dotfiles/.git
-cp -R dotfiles/. /
+cp -R dotfiles/. ~/
 ```
 
-**NOTE**: Be sure to have `git` installed.
+**NOTE**: Be sure to have `git` and `nano` or any text editor installed.
 
 # Dependencies
 
-First of all, to download the needed dependencies, you must uncomment all libraries from the `pacman.conf` file if you haven't done it yet.
+To download the needed dependencies, you must uncomment all libraries from the `/etc/pacman.conf` file if you haven't done it yet.
 
 Uncomment every libraries at the bottom of the file:
 
@@ -43,7 +43,7 @@ This should be looking like this for every libraries:
 Include = [...]
 ```
 
-Also, you can uncomment `ParallelDownloads` (in the same `pacman.conf` file) and put a bigger number if you have a good internet connexion:
+Also, you can uncomment `ParallelDownloads` (in the same `/etc/pacman.conf` file) and put a bigger number if you have a good internet connexion, for example:
 
 ```bash
 ParallelDownloads = 50
@@ -57,10 +57,9 @@ pipewire pipewire-alsa pipewire-pulse pipewire-jack \
 wireplumber zsh alacritty polkit polkit-gnome \
 libnotify gnome-themes-extra xdg-desktop-portal \
 xdg-desktop-portal-gtk xdg-desktop-portal-hyprland \
-hyprland neovim typescript typescript-language-server \
-python python-pip eslint_d stylua man-db xdg-utils \
+hyprland neovim typescript ripgrep fd prettier mdformat \
+python python-pip eslint stylua man-db xdg-utils \
 feh mpv noto-fonts-extra noto-fonts-emoji hyprpaper \
-grim kooha \
 ```
 
 Install `yay` if you haven't done it:
@@ -74,7 +73,7 @@ makepkg -si
 Run this to download the dependencies (these ones from the AUR repository):
 
 ```bash
-yay -S prettierd waybar-hyprland-git wlr-randr
+yay -S waybar-hyprland-git wlr-randr visual-studio-code-bin
 ```
 
 # Neovim
@@ -94,33 +93,16 @@ python3 -m pip install --user --upgrade pynvim
 And run this too, to update and install everything in Neovim:
 
 ```bash
-nvim --headless \
-  -c "autocmd User PackerComplete quitall" \
-  -c "PackerSync"
-
-nvim --headless \
-  -c "MasonInstall css-lsp \
-  lua-language-server prettierd \
-  typescript-language-server" \
-  -c "10sleep" \
-  -c "qa"
-
-nvim --headless \
-  -c "TSUpdate" \
-  -c "10sleep" \
-  -c "qa"
-
-nvim --headless \
-  -c "MasonUpdate" \
-  -c "10sleep" \
-  -c "qa"
+nvim +"lua require('lazy').sync({wait=true}); vim.cmd('qa!')" &&
+nvim -c ":TSUpdate" +qa &&
+nvim -c ":MasonUpdate" +qa
 ```
 
 **NOTE**: Shortcuts for Neovim are present in configuration files, feel free to explore it.
 
 # Fonts
 
-If you want to use the default font for this custom DE, you will need to run this to scan all the fonts directories and inform the system of the "Roboto Mono" font folder `~./local/share/fonts/`:
+If you want to use the default font for this custom DE, you will need to run this, in order to scan all the fonts directories and inform the system of the `roboto-mono` font folder here `~/.local/share/fonts/roboto-mono/`:
 
 ```bash
 fc-cache
@@ -128,7 +110,7 @@ fc-cache
 
 # ZSH
 
-In the `.zshrc` file there are 2 things activated:
+In the `~/.zshrc` file there are 2 things activated:
 
 1. A zsh [theme](https://github.com/romkatv/powerlevel10k).
 2. A [history search plugin](https://github.com/zsh-users/zsh-history-substring-search).
@@ -146,7 +128,7 @@ After this, you will run this to use `zsh` as the default shell:
 chsh -s /usr/bin/zsh
 ```
 
-And to reload the `zsh` configuration from the `.zshrc` file, run this:
+And to reload the `zsh` configuration from the `~/.zshrc` file, run this:
 
 ```zsh
 source ~/.zshrc
@@ -154,7 +136,7 @@ source ~/.zshrc
 
 # Screen
 
-My screen name for Wayland is `HDMI-A-2` so I put it in `hyprpaper.conf` and `hypr.conf`.
+My screen name for Wayland is `HDMI-A-2` so I put it in `~/.config/hypr/hyprpaper.conf` and `~/.config/hypr/hyprland.conf`.
 
 If your screen name is different, you need to change it in these two files, `hyprpaper.conf` and `hypr.conf`.
 
@@ -166,15 +148,15 @@ wlr-randr | grep "VGA\|HDMI\|DisplayPort\|DVI"
 
 # Wallpapers
 
-To change the wallpaper, you just need to change the directory where you store the wallpapers in `hyprpaper.conf`:
+To change the wallpaper, you just need to change the directory where you store the wallpapers in ` ~/.config/hypr/hyprpaper.conf`:
 
 ```bash
 nano ~/.config/hypr/hyprpaper.conf
 ```
 
 ```conf
-preload = ~/
-wallpaper = HDMI-A-2,~/
+preload = ~/<the-path-of-your-wallpaper>
+wallpaper = HDMI-A-2,~/<the-path-of-your-wallpaper>
 ```
 
 # VSCode
@@ -207,7 +189,7 @@ This is my full Arch installation dependencies:
 ```bash
 # AUR repository
 
-wlr-randr pnpm anki prettierd waybar-hyprland-git google-chrome
+pnpm anki google-chrome waybar-hyprland-git wlr-randr visual-studio-code-bin
 ```
 
 ```bash
@@ -219,10 +201,10 @@ pipewire pipewire-alsa pipewire-pulse pipewire-jack \
 wireplumber nodejs zsh alacritty polkit polkit-gnome \
 libnotify gammastep gnome-themes-extra xdg-desktop-portal \
 xdg-desktop-portal-gtk xdg-desktop-portal-hyprland \
-hyprland neovim typescript typescript-language-server \
-python python-pip eslint_d vlc stylua wl-clipboard \
-man-db nnn xdg-utils github-cli feh yt-dlp mpv gnu-free-fonts \
-noto-fonts-extra noto-fonts-emoji thunar hyprpaper grim kooha tree \
+hyprland neovim mdformat prettier typescript ripgrep fd eslint stylua \
+python python-pip wl-clipboard \
+man-db nnn xdg-utils feh yt-dlp mpv gnu-free-fonts \
+noto-fonts-extra noto-fonts-emoji thunar hyprpaper tree \
 base linux-zen linux-firmware sof-firmware base-devel \
 efibootmgr nano intel-ucode git
 ```

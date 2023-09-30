@@ -1,11 +1,11 @@
 [
-  // Toggle comment
+  // Toggle comment.
   {
     "key": "ctrl+numpad_divide",
     "command": "editor.action.blockComment",
     "when": "editorTextFocus && !editorReadonly"
   },
-  // Go start/end line
+  // Go start/end line.
   {
     "key": "ctrl+up ctrl+right",
     "command": "cursorLineEnd"
@@ -14,37 +14,37 @@
     "key": "ctrl+up ctrl+left",
     "command": "cursorLineStart"
   },
-  // Make room
+  // Make room.
   {
     "key": "alt+1",
     "command": "multiCommand.makeRoom"
   },
-  // Show commands
+  // Show commands.
   {
     "key": "ctrl+p",
     "command": "workbench.action.showCommands"
   },
-  // Go to the folder
+  // Go to the folder.
   {
     "key": "ctrl+shift+o",
     "command": "revealFileInOS"
   },
-  // Symbol
+  // Symbol.
   {
     "key": "ctrl+r",
     "command": "workbench.action.gotoSymbol"
   },
-  // New file
+  // New file.
   {
     "key": "ctrl+n",
     "command": "explorer.newFile"
   },
-  // Terminal
+  // Terminal.
   {
     "key": "ctrl+t",
     "command": "workbench.action.terminal.toggleTerminal"
   },
-  // Enter to make a line
+  // Enter to make a line.
   {
     "key": "ctrl+enter",
     "command": "editor.action.insertLineAfter",
@@ -55,13 +55,13 @@
     "command": "editor.action.insertLineBefore",
     "when": "textInputFocus"
   },
-  // Change window focus
+  // Change window focus.
   {
     "key": "ctrl+tab",
     "command": "workbench.action.nextEditor",
     "when": "editorTextFocus"
   },
-  // Move lines
+  // Move lines.
   {
     "key": "alt+down",
     "command": "editor.action.moveLinesDownAction",
@@ -72,7 +72,7 @@
     "command": "editor.action.moveLinesUpAction",
     "when": "editorTextFocus"
   },
-  // Select lines
+  // Select lines.
   {
     "key": "ctrl+shift ctrl+up",
     "command": "cursorUpSelect",
@@ -93,13 +93,13 @@
     "command": "cursorWordPartRightSelect",
     "when": "editorTextFocus"
   },
-  // Delete a line
+  // Delete a line.
   {
     "key": "ctrl+x",
     "command": "editor.action.deleteLines",
     "when": "editorTextFocus"
   },
-  // Jump word to word
+  // Jump word to word.
   {
     "key": "ctrl+left",
     "command": "cursorWordPartLeft",
@@ -110,7 +110,7 @@
     "command": "cursorWordPartRight",
     "when": "textInputFocus"
   },
-  // Delete a word
+  // Delete a word.
   {
     "key": "ctrl+backspace",
     "command": "deleteWordPartLeft",
@@ -121,13 +121,13 @@
     "command": "deleteWordPartLeft",
     "when": "textInputFocus"
   },
-  // Focus on file on file explore
+  // Focus on file on file explore.
   {
     "key": "ctrl+b",
     "command": "workbench.view.explorer",
     "when": "editorTextFocus"
   },
-  // Switch between window
+  // Switch between window.
   {
     "key": "alt+left",
     "command": "workbench.action.focusPreviousGroup",
@@ -138,7 +138,7 @@
     "command": "workbench.action.focusNextGroup",
     "when": "editorTextFocus"
   },
-  // Fold/unfold
+  // Fold/unfold.
   {
     "key": "ctrl+i",
     "command": "editor.unfoldAll",
