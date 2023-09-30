@@ -20,8 +20,9 @@
 
 ```bash
 git clone https://github.com/souli-a/dotfiles.git
-sudo rm -rf dotfiles/.git
-cp -R dotfiles/. ~/
+cd dotfiles
+rm -rf .git
+cp -R . ~/
 ```
 
 **NOTE**: Be sure to have `git` and `nano` or any text editor installed.
@@ -78,13 +79,7 @@ yay -S waybar-hyprland-git wlr-randr visual-studio-code-bin
 
 # Neovim
 
-For the Neovim configuration you will need to run this, `packer` is the package manager (this is the one I use) for all the plugins we use in Neovim:
-
-```bash
-git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-```
-
-And then run this for certain needed dependencies:
+Run this for certain needed dependencies:
 
 ```bash
 python3 -m pip install --user --upgrade pynvim
@@ -113,7 +108,7 @@ fc-cache
 In the `~/.zshrc` file there are 2 things activated:
 
 1. A zsh [theme](https://github.com/romkatv/powerlevel10k).
-2. A [history search plugin](https://github.com/zsh-users/zsh-history-substring-search).
+1. A [history search plugin](https://github.com/zsh-users/zsh-history-substring-search).
 
 If you want to use them, you need to install them by executing this:
 
@@ -148,7 +143,7 @@ wlr-randr | grep "VGA\|HDMI\|DisplayPort\|DVI"
 
 # Wallpapers
 
-To change the wallpaper, you just need to change the directory where you store the wallpapers in ` ~/.config/hypr/hyprpaper.conf`:
+To change the wallpaper, you just need to change the directory where you store the wallpapers in `~/.config/hypr/hyprpaper.conf`:
 
 ```bash
 nano ~/.config/hypr/hyprpaper.conf
@@ -161,20 +156,25 @@ wallpaper = HDMI-A-2,~/<the-path-of-your-wallpaper>
 
 # VSCode
 
-For the VSCode theming and options related to `settings.json`, install [this](https://marketplace.visualstudio.com/items?itemName=antfu.icons-carbon) (icons theme) and [this](https://marketplace.visualstudio.com/items?itemName=Catppuccin.catppuccin-vsc) (color theme).
+For the VSCode theming and options related to `~/.config/Code/User/settings.json`, install [this](https://marketplace.visualstudio.com/items?itemName=antfu.icons-carbon) (icons theme) and [this](https://marketplace.visualstudio.com/items?itemName=Catppuccin.catppuccin-vsc) (color theme).
 
 # Basic shortcuts
 
 - Shutdown the PC: `SUPER + SHIFT + PARENRIGHT`
-- Reboot the PC: `SUPER + SHIFT + EQUAL`
 
-- Launch Alacritty (terminal): `SUPER + G`
-- Launch Rofi (search apps): `SUPER + A`
-- Launch VSCode: `SUPER + E`
-- Launch Google Chrome: `SUPER + D`
+- Reboot the PC: `SUPER + SHIFT + EQUAL`.
 
-- Put the window in fullscreen: `SUPER + SHIFT + F`
-- Kill the window (close): `SUPER + SPACE`
+- Launch Alacritty (terminal): `SUPER + G`.
+
+- Launch Rofi (search apps): `SUPER + A`.
+
+- Launch VSCode: `SUPER + E`.
+
+- Launch Google Chrome: `SUPER + D`.
+
+- Put the window in fullscreen: `SUPER + SHIFT + F`.
+
+- Kill the window (close): `SUPER + SPACE`.
 
 You can edit and see all the Hyprland shortcuts in the `~/.config/hypr/hyprland.conf` file.
 
@@ -188,13 +188,11 @@ This is my full Arch installation dependencies:
 
 ```bash
 # AUR repository
-
 pnpm anki google-chrome waybar-hyprland-git wlr-randr visual-studio-code-bin
 ```
 
 ```bash
 # Official repository
-
 ntfs-3g ffmpeg4.4 dunst rofi mesa lib32-mesa pamixer \
 htop slurp qt5-wayland qt6-wayland obsidian otf-opendyslexic-nerd \
 pipewire pipewire-alsa pipewire-pulse pipewire-jack \
